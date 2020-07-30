@@ -76,4 +76,30 @@ fun main(args: Array<String>){
         i++
     }while(i<=10)
 
+   /* 
+    try {
+        var compute: String?
+        compute = null
+        var longitud: Int = compute!!.length
+    }
+    catch(e: NullPointerException) {
+        println("No aceptamos valores nulos")
+    }
+    */
+
+    //Llamada segura
+    var compute: String? = null
+    var longitud: Int? = compute?.length
+    println("Longitud: $longitud")
+
+    //Operador Elvis ?:
+    var teclado: String? = null
+    val longitudTeclado: Int = teclado?.length ?: 0
+    println("Longitud: $longitudTeclado")
+
+    val listWithNulls: List<Int> = listOf<Int>(7,null,null,4)
+    println("Lista con Null: ${listWithNulls}")
+
+    val listWithoutNulls: List<Int?> = listWithNulls.filterNotNull()
+    println(listWithoutNulls)
 }
