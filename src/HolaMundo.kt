@@ -22,4 +22,18 @@ fun main(args: Array<String>){
     println(a.div(b))
 
     println(N)
+
+    val nombre = "Alberto"
+    val apellido: String = "Del Viejo"
+
+    val nombreapellido = "Alberto\nDel Viejo"
+    println("Tu nombre es: $nombreapellido")
+
+    println("Tu nombre es: $nombre")
+
+    //Raw String
+    val parrafo = """Lorem Ipsum is simply dummy text of the printing and 
+                    typsetting industry.Loren""".trimIndent()
+
+    println(parrafo)
 }
