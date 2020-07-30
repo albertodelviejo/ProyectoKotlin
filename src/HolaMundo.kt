@@ -36,4 +36,30 @@ fun main(args: Array<String>){
                     typsetting industry.Loren""".trimIndent()
 
     println(parrafo)
+
+    val onetoHundred: IntRange = 1..5
+    for (i in onetoHundred){
+        println(i)
+    }
+
+    for (letra in 'A'..'C'){
+        print(letra)
+    }
+
+    //Sentencia if --> Operadores lógicos booleano
+    val numero = 2
+    if(numero.equals(2)){//false
+    println("Si, el numero es igual a 2")
+    }else{
+        println("No, el numero no es igual a 2")
+    }
+     
+    //Sentencia when (similar a switch)
+    when (numero){
+        in 1..5 -> println("Está entre 1 y 5")
+        in 1..3 -> println("Está entre 1 y 3")
+        !in 5..10 -> println("No esta entre 5 y 10")
+        else -> println("No esta en ninguno de los anteriores")
+    }
+
 }
