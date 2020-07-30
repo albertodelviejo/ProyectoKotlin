@@ -62,4 +62,18 @@ fun main(args: Array<String>){
         else -> println("No esta en ninguno de los anteriores")
     }
 
+    var i = 1
+    //while para manejar contadores
+    while (i<=10){
+        println("mensaje: $i")
+        i++
+    }
+
+    //do while 
+    i = 1
+    do{
+        println("mensaje: $i")
+        i++
+    }while(i<=10)
+
 }
