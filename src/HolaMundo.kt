@@ -159,6 +159,11 @@ println("Raiz cuadrada de: ${Math.sqrt(4.0)}")
 val numbers2 = intArrayOf(6,6,23,9,2,3,2)
 println("El promedio de los numeros es: ${averageNumbers(numbers2,2)}")
 
+println("${evaluate('+',2)}")
+}
+
+fun evaluate(character: Char = '=', number: Int = 2): String{
+    return "${number} es ${character}"
 }
 
 fun averageNumbers (numbers: IntArray, n: Int): Int{
