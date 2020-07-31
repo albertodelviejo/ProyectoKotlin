@@ -154,5 +154,17 @@ var mensaje = "El valor de X es $x"
 x++
 println("${mensaje.replace("es","fue")}, x es igual a $x")
 
+println("Raiz cuadrada de: ${Math.sqrt(4.0)}")
 
+val numbers2 = intArrayOf(6,6,23,9,2,3,2)
+println("El promedio de los numeros es: ${averageNumbers(numbers2,2)}")
+
+}
+
+fun averageNumbers (numbers: IntArray, n: Int): Int{
+    var sum = 0
+    for (num in numbers){
+        sum+=num
+    }
+    return sum / numbers.size
 }
