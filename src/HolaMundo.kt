@@ -119,4 +119,31 @@ fun main(args: Array<String>){
     val avrg = sum / numbers.size
 
 println("Average: $avrg")
+
+var arrayObject = arrayOf(5,6,7,8)
+var intPrimitive : IntArray = arrayObject.toIntArray()
+
+//Sumar todos los números del array
+var suma = arrayObject.sum()
+println("La suma del array es: $suma")
+
+//Añadir valor a un array
+arrayObject = arrayObject.plus(4)
+for (a in arrayObject){
+    println("Array: $a")
+}
+
+//Darle la vuelta a un array
+
+arrayObject = arrayObject.reversedArray()
+for (a in arrayObject){
+    println("Array reversa: $a")
+}
+
+arrayObject.reverse()
+for (a in arrayObject){
+    println("Array reversa: $a")
+}
+
+
 }
