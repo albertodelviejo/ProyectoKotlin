@@ -1,4 +1,5 @@
 import model.Camera
+import model.Movie
 import model.Shoe
 import javax.jnlp.ExtensionInstallerService
 
@@ -195,6 +196,11 @@ fun main(args: Array<String>) {
 
     shoe.model = "Tenis"
     println(shoe.model)
+
+    val movie = Movie("Coco","Pixar", 120)
+    println(movie.title)
+    println(movie.creator)
+    println("${movie.duration} min")
 
 
 }
