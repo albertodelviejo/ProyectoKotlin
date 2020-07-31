@@ -1,3 +1,5 @@
+import model.*
+
 //La variable global tiene que ser unchangeable para no contaminar las funciones puras (De otro modo se podría modificar y alterar todo)
 
 const val N = "NAME" // const siempre sera para variables globales
@@ -178,9 +180,11 @@ var calculateNumber = {x: Int -> when (x){
     in 8..10 -> println("Esta entre 8 y 10")
 }}
 
-println(calculateNumber(6))
+calculateNumber(6)
 
-
+val camera = Camera()
+camera.turnOn()
+println("La camara esta: $camera.isOn")
 
 }
 
