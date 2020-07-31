@@ -160,6 +160,28 @@ val numbers2 = intArrayOf(6,6,23,9,2,3,2)
 println("El promedio de los numeros es: ${averageNumbers(numbers2,2)}")
 
 println("${evaluate('+',2)}")
+
+//Lambdas
+var saludo = {println("Hola mundo")}
+saludo()
+
+//var suma = { instrucciones -> sentencias }
+val plus = {a:Int , b:Int, c:Int -> a+b+c}
+val result = plus(3,4,5)
+println(plus(1,2,3))
+println({a:Int , b:Int, c:Int -> a+b+c}(7,8,9))
+
+
+var calculateNumber = {x: Int -> when (x){
+    in 1..3 -> println("Esta entre 1 y 3")
+    in 4..7 -> println("Esta entre 4 y 7")
+    in 8..10 -> println("Esta entre 8 y 10")
+}}
+
+println(calculateNumber(6))
+
+
+
 }
 
 fun evaluate(character: Char = '=', number: Int = 2): String{
