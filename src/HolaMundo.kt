@@ -190,17 +190,23 @@ fun main(args: Array<String>) {
     camera.turnOn()
     println("La camara esta: ${camera.getCameraStatus()}")
 
-    val shoe = Shoe()
+    val shoe = Shoe("Shoe","Muy bonito", 12345,"Adidas")
     shoe.size = 37
     println(shoe.size)
 
     shoe.model = "Tenis"
     println(shoe.model)
 
+    println(shoe.marca)
+
+    println(shoe.toString())
+
     val movie = Movie("Coco","Pixar", 120)
     println(movie.title)
     println(movie.creator)
     println("${movie.duration} min")
+
+
 
 
 }
