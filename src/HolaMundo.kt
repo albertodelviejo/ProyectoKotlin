@@ -97,9 +97,26 @@ fun main(args: Array<String>){
     val longitudTeclado: Int = teclado?.length ?: 0
     println("Longitud: $longitudTeclado")
 
-    val listWithNulls: List<Int> = listOf<Int>(7,null,null,4)
+    val listWithNulls: List<Int?> = listOf<Int?>(7,null,null,4)
     println("Lista con Null: ${listWithNulls}")
 
     val listWithoutNulls: List<Int?> = listWithNulls.filterNotNull()
     println(listWithoutNulls)
+
+    //Array sin definir tipo de dato
+    val countries = arrayOf("España","Mexico","Colombia","Argentina")
+    //Array definiendo tipo de dato
+    val days = arrayOf<String>("Lunes","Martes","Miercoles")
+    //Array definiendo tipo de dato sin inferir
+
+
+
+    val numbers = intArrayOf(6,6,23,9,2,3,2)
+    var sum = 0
+    for (num in numbers){
+        sum+=num
+    }
+    val avrg = sum / numbers.size
+
+println("Average: $avrg")
 }
