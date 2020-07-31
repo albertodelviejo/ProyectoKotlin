@@ -1,4 +1,6 @@
 import model.Camera
+import model.Shoe
+import javax.jnlp.ExtensionInstallerService
 
 //La variable global tiene que ser unchangeable para no contaminar las funciones puras (De otro modo se podría modificar y alterar todo)
 
@@ -7,13 +9,13 @@ const val N = "NAME" // const siempre sera para variables globales
 
 //Funciones puras 
 
-fun main(args: Array<String>){
+fun main(args: Array<String>) {
     println("Hola mundo")
-    println(1+1)
-    println(3-1)
-    println(2*2)
-    println(4/2)
-    println(7%2)
+    println(1 + 1)
+    println(3 - 1)
+    println(2 * 2)
+    println(4 / 2)
+    println(7 % 2)
 
     val a = 4   //val se utiliza para variables locales 
     val b = 2
@@ -40,24 +42,24 @@ fun main(args: Array<String>){
     println(parrafo)
 
     val onetoHundred: IntRange = 1..5
-    for (i in onetoHundred){
+    for (i in onetoHundred) {
         println(i)
     }
 
-    for (letra in 'A'..'C'){
+    for (letra in 'A'..'C') {
         print(letra)
     }
 
     //Sentencia if --> Operadores lógicos booleano
     val numero = 2
-    if(numero.equals(2)){//false
-    println("Si, el numero es igual a 2")
-    }else{
+    if (numero.equals(2)) {//false
+        println("Si, el numero es igual a 2")
+    } else {
         println("No, el numero no es igual a 2")
     }
-     
+
     //Sentencia when (similar a switch)
-    when (numero){
+    when (numero) {
         in 1..5 -> println("Está entre 1 y 5")
         in 1..3 -> println("Está entre 1 y 3")
         !in 5..10 -> println("No esta entre 5 y 10")
@@ -66,28 +68,28 @@ fun main(args: Array<String>){
 
     var i = 1
     //while para manejar contadores
-    while (i<=10){
+    while (i <= 10) {
         println("mensaje: $i")
         i++
     }
 
     //do while 
     i = 1
-    do{
+    do {
         println("mensaje: $i")
         i++
-    }while(i<=10)
+    } while (i <= 10)
 
-   /* 
-    try {
-        var compute: String?
-        compute = null
-        var longitud: Int = compute!!.length
-    }
-    catch(e: NullPointerException) {
-        println("No aceptamos valores nulos")
-    }
-    */
+    /*
+     try {
+         var compute: String?
+         compute = null
+         var longitud: Int = compute!!.length
+     }
+     catch(e: NullPointerException) {
+         println("No aceptamos valores nulos")
+     }
+     */
 
     //Llamada segura
     var compute: String? = null
@@ -99,104 +101,112 @@ fun main(args: Array<String>){
     val longitudTeclado: Int = teclado?.length ?: 0
     println("Longitud: $longitudTeclado")
 
-    val listWithNulls: List<Int?> = listOf<Int?>(7,null,null,4)
+    val listWithNulls: List<Int?> = listOf<Int?>(7, null, null, 4)
     println("Lista con Null: ${listWithNulls}")
 
     val listWithoutNulls: List<Int?> = listWithNulls.filterNotNull()
     println(listWithoutNulls)
 
     //Array sin definir tipo de dato
-    val countries = arrayOf("España","Mexico","Colombia","Argentina")
+    val countries = arrayOf("España", "Mexico", "Colombia", "Argentina")
     //Array definiendo tipo de dato
-    val days = arrayOf<String>("Lunes","Martes","Miercoles")
+    val days = arrayOf<String>("Lunes", "Martes", "Miercoles")
     //Array definiendo tipo de dato sin inferir
 
 
-
-    val numbers = intArrayOf(6,6,23,9,2,3,2)
+    val numbers = intArrayOf(6, 6, 23, 9, 2, 3, 2)
     var sum = 0
-    for (num in numbers){
-        sum+=num
+    for (num in numbers) {
+        sum += num
     }
     val avrg = sum / numbers.size
 
-println("Average: $avrg")
+    println("Average: $avrg")
 
-var arrayObject = arrayOf(5,6,7,8)
-var intPrimitive : IntArray = arrayObject.toIntArray()
+    var arrayObject = arrayOf(5, 6, 7, 8)
+    var intPrimitive: IntArray = arrayObject.toIntArray()
 
 //Sumar todos los números del array
-var suma = arrayObject.sum()
-println("La suma del array es: $suma")
+    var suma = arrayObject.sum()
+    println("La suma del array es: $suma")
 
 //Añadir valor a un array
-arrayObject = arrayObject.plus(4)
-for (a in arrayObject){
-    println("Array: $a")
-}
+    arrayObject = arrayObject.plus(4)
+    for (a in arrayObject) {
+        println("Array: $a")
+    }
 
 //Darle la vuelta a un array
 
-arrayObject = arrayObject.reversedArray()
-for (a in arrayObject){
-    println("Array reversa: $a")
-}
+    arrayObject = arrayObject.reversedArray()
+    for (a in arrayObject) {
+        println("Array reversa: $a")
+    }
 
-arrayObject.reverse()
-for (a in arrayObject){
-    println("Array reversa: $a")
-}
+    arrayObject.reverse()
+    for (a in arrayObject) {
+        println("Array reversa: $a")
+    }
 
 //Referencia a expresiones
 
-var x = 5
-println("X es igual a 5? ${x==5}")
+    var x = 5
+    println("X es igual a 5? ${x == 5}")
 
-var mensaje = "El valor de X es $x"
-x++
-println("${mensaje.replace("es","fue")}, x es igual a $x")
+    var mensaje = "El valor de X es $x"
+    x++
+    println("${mensaje.replace("es", "fue")}, x es igual a $x")
 
-println("Raiz cuadrada de: ${Math.sqrt(4.0)}")
+    println("Raiz cuadrada de: ${Math.sqrt(4.0)}")
 
-val numbers2 = intArrayOf(6,6,23,9,2,3,2)
-println("El promedio de los numeros es: ${averageNumbers(numbers2,2)}")
+    val numbers2 = intArrayOf(6, 6, 23, 9, 2, 3, 2)
+    println("El promedio de los numeros es: ${averageNumbers(numbers2, 2)}")
 
-println("${evaluate('+',2)}")
+    println("${evaluate('+', 2)}")
 
 //Lambdas
-var saludo = {println("Hola mundo")}
-saludo()
+    var saludo = { println("Hola mundo") }
+    saludo()
 
 //var suma = { instrucciones -> sentencias }
-val plus = {a:Int , b:Int, c:Int -> a+b+c}
-val result = plus(3,4,5)
-println(plus(1,2,3))
-println({a:Int , b:Int, c:Int -> a+b+c}(7,8,9))
+    val plus = { a: Int, b: Int, c: Int -> a + b + c }
+    val result = plus(3, 4, 5)
+    println(plus(1, 2, 3))
+    println({ a: Int, b: Int, c: Int -> a + b + c }(7, 8, 9))
 
 
-var calculateNumber = {x: Int -> when (x){
-    in 1..3 -> println("Esta entre 1 y 3")
-    in 4..7 -> println("Esta entre 4 y 7")
-    in 8..10 -> println("Esta entre 8 y 10")
-}}
+    var calculateNumber = { x: Int ->
+        when (x) {
+            in 1..3 -> println("Esta entre 1 y 3")
+            in 4..7 -> println("Esta entre 4 y 7")
+            in 8..10 -> println("Esta entre 8 y 10")
+        }
+    }
 
-calculateNumber(6)
+    calculateNumber(6)
 
-val camera = Camera()
-camera.turnOn()
-println("La camara esta: ${camera.isOn}")
+    val camera = Camera()
+    camera.turnOn()
+    println("La camara esta: ${camera.getCameraStatus()}")
+
+    val shoe = Shoe()
+    shoe.size = 37
+    println(shoe.size)
+
+    shoe.model = "Tenis"
+    println(shoe.model)
 
 
 }
 
-fun evaluate(character: Char = '=', number: Int = 2): String{
+fun evaluate(character: Char = '=', number: Int = 2): String {
     return "${number} es ${character}"
 }
 
-fun averageNumbers (numbers: IntArray, n: Int): Int{
+fun averageNumbers(numbers: IntArray, n: Int): Int {
     var sum = 0
-    for (num in numbers){
-        sum+=num
+    for (num in numbers) {
+        sum += num
     }
     return sum / numbers.size
 }
