@@ -1,4 +1,4 @@
-import model.*
+import model.Camera
 
 //La variable global tiene que ser unchangeable para no contaminar las funciones puras (De otro modo se podría modificar y alterar todo)
 
@@ -184,7 +184,8 @@ calculateNumber(6)
 
 val camera = Camera()
 camera.turnOn()
-println("La camara esta: $camera.isOn")
+println("La camara esta: ${camera.isOn}")
+
 
 }
 
