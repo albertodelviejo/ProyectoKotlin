@@ -145,5 +145,14 @@ for (a in arrayObject){
     println("Array reversa: $a")
 }
 
+//Referencia a expresiones
+
+var x = 5
+println("X es igual a 5? ${x==5}")
+
+var mensaje = "El valor de X es $x"
+x++
+println("${mensaje.replace("es","fue")}, x es igual a $x")
+
 
 }
